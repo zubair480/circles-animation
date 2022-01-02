@@ -1,8 +1,10 @@
 * {
+  /*  just to clear the extra margin and padding formed by the browser */
   margin: 0;
   padding: 0;
 }
 body {
+  /* It will centerlize the body tag */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +12,7 @@ body {
   background: rgb(2, 0, 36);
 }
 .loader {
+  /* We are giving a width and height to the main container so we can adjust our span's later on.  */
   position: relative;
   width: 300px;
   height: 300px;
@@ -17,15 +20,18 @@ body {
   transform: perspective(500px) rotateX(60deg);
 }
 .loader span {
+  /* The spans now have a border of 2px which is shown in the output */
   position: absolute;
   display: block;
   border: 2px solid #fff;
 
   box-sizing: border-box;
-  border-radius: 50%;
+  border-radius: 50%; /* It will make the span a circle */
   animation: animate 3s ease-in-out infinite;
   margin: 50px;
 }
+
+/* Adding out first animation */
 @keyframes animate {
   0%,
   100% {
@@ -41,6 +47,7 @@ body {
   bottom: 0;
   right: 0;
   animation-delay: 1.4s;
+  /* Giving delay to each span so it can load lately (In a sequence) */
 }
 .loader span:nth-child(2) {
   top: 10px;
